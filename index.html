@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Game Tebak Gambar (Memory Match)</title>
+    <link rel="icon" type="image/x-icon" href="favicon.png" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="wrap">
+      <div class="board-wrap">
+        <header>
+          <h1>Game Tebak Gambar — Temukan pasangan yang sama</h1>
+          <div class="controls">
+            <label for="size">Grid:</label>
+            <select id="size">
+              <option value="4">4 x 4 (mudah)</option>
+              <option value="6">6 x 4 (lebih sulit)</option>
+            </select>
+            <button id="shuffleBtn">Mulai/Ulang</button>
+          </div>
+        </header>
+
+        <div id="gridContainer" class="grid grid-4"></div>
+      </div>
+
+      <aside class="side">
+        <div class="panel">
+          <div
+            style="
+              display: flex;
+              justify-content: space-between;
+              align-items: center;
+            "
+          >
+            <strong>Status</strong>
+            <button id="resetScore">Reset Skor</button>
+          </div>
+          <div style="margin-top: 10px; text-align: center">
+            <div class="score" id="score">0</div>
+            <div class="meta">
+              <div>Skor</div>
+              <div id="pairCount">0 pasangan</div>
+            </div>
+            <div class="meta" style="margin-top: 8px">
+              <div>Gerakan</div>
+              <div id="moves">0</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="panel">
+          <strong>Cara main</strong>
+          <ol style="padding-left: 18px; margin: 8px 0 0; color: var(--muted)">
+            <li>Klik kartu untuk membalik.</li>
+            <li>Cari dua gambar yang sama untuk mendapatkan skor.</li>
+            <li>Gunakan tombol "Mulai/Ulang" untuk mengacak dan memulai.</li>
+          </ol>
+        </div>
+
+        <div class="footer-small">
+          Dibuat untuk Anda — semoga menyenangkan 🎮
+        </div>
+      </aside>
+    </div>
+
+    <script src="index.js"></script>
+  </body>
+</html>
